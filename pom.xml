@@ -10,11 +10,11 @@
 	</parent>
 	<groupId>com.maplr</groupId>
 	<artifactId>test-hockey-game</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>test-hockey-game</name>
 	<description>Test technique Maplr</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
