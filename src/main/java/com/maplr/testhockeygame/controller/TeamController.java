@@ -4,6 +4,8 @@ import com.maplr.testhockeygame.dto.PlayerDto;
 import com.maplr.testhockeygame.dto.TeamDto;
 import com.maplr.testhockeygame.entity.Team;
 import com.maplr.testhockeygame.service.TeamService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +20,6 @@ import java.net.URI;
 @RestController
 @RequestMapping("/api/team")
 public class TeamController {
-
     private final TeamService teamService;
 
     public TeamController(TeamService teamService) {
