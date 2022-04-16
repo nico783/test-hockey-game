@@ -5,8 +5,10 @@ spring:
         username: sa
         password:
     jpa:
-        database-platform: org.hibernate.dialect.H2Dialect
+        # For this test, we leave it to hibernate to create the H2 database schema when the application starts.
+        # This parameter allows the schema to be initialized before the execution of the data.sql script (filling the tables with a data set).
         defer-datasource-initialization: true
+        database-platform: org.hibernate.dialect.H2Dialect
         show-sql: true
     h2:
         console:

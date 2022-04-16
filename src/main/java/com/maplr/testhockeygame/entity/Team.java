@@ -5,19 +5,43 @@ import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
 
+/**
+ * Team entity.
+ *
+ * @author Nicolas Benizri
+ */
 @Entity
 public class Team implements Serializable {
+
+    /**
+     * Technical identifier.
+     */
     @Id
     private long id;
+
+    /**
+     * Team coach.
+     */
     private String coach;
+
+    /**
+     * Team year.
+     */
     private long year;
 
+    /**
+     * All the players in the team.
+     * A team consists of several players, and a player can be linked to several teams of different years.
+     */
     @ManyToMany
     @JoinTable(name = "team_player",
             joinColumns = @JoinColumn(name = "team_id"),
             inverseJoinColumns = @JoinColumn(name = "player_number"))
     private Set<Player> players;
 
+    /**
+     * The team captain.
+     */
     @OneToOne
     @JoinColumn(name="captain_number")
     private Player captain;

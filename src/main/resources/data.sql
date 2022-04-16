@@ -1,3 +1,5 @@
+--initialize data
+
 INSERT INTO player(number, name, lastname, position)
 VALUES (31, 'Carey', 'Price', 'goaltender'),
 (14, 'Nick', 'Suzuki', 'forward'),

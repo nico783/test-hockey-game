@@ -5,15 +5,37 @@ import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * Player entity.
+ *
+ * @author Nicolas Benizri
+ */
 @Entity
 public class Player implements Serializable {
+
+    /**
+     * Player's number.
+     */
     @Id
     private long number;
+
+    /**
+     * Player's first name.
+     */
     private String name;
+
+    /**
+     * Player's name.
+     */
     private String lastname;
+
+    /**
+     * Player's position.
+     */
     private String position;
 
     public Player() {
+        // Default constructor used by Spring Data.
     }
 
     public Player(long number, String name, String lastname, String position) {
