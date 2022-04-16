@@ -13,6 +13,16 @@ public class Player implements Serializable {
     private String lastname;
     private String position;
 
+    public Player() {
+    }
+
+    public Player(long number, String name, String lastname, String position) {
+        this.number = number;
+        this.name = name;
+        this.lastname = lastname;
+        this.position = position;
+    }
+
     public long getNumber() {
         return number;
     }

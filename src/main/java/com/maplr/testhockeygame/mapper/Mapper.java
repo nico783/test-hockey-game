@@ -16,18 +16,22 @@ public class Mapper {
         return new TeamDto(team.getId(),
                 team.getCoach(),
                 team.getYear(),
-                playersToPlayerDtos(team.getPlayers(), team.getCaptain()));
+                playersToPlayerDtos(team));
     }
 
-    private List<PlayerDto> playersToPlayerDtos(Set<Player> players, Player captain) {
+    public PlayerDto playerToPlayerDto(Player player, Team team) {
+        Player captain = team.getCaptain();
+        return new PlayerDto(player.getNumber(),
+                player.getName(),
+                player.getLastname(),
+                player.getPosition(),
+                captain.equals(player) ? true : null);
+    }
+
+    private List<PlayerDto> playersToPlayerDtos(Team team) {
+        Set<Player> players = team.getPlayers();
         return players.stream()
-                .map(player -> new PlayerDto(player.getNumber(),
-                        player.getName(),
-                        player.getLastname(),
-                        player.getPosition(),
-                        captain.equals(player) ? true : null))
+                .map(player -> playerToPlayerDto(player, team))
                 .collect(Collectors.toList());
     }
-
-    // TODO: 15/04/2022 Faire tu
 }
