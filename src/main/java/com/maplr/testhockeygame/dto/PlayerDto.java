@@ -59,7 +59,7 @@ public class PlayerDto implements Serializable {
         return isCaptain;
     }
 
-    public void setCaptain(Boolean captain) {
+    public void setIsCaptain(Boolean captain) {
         isCaptain = captain;
     }
 
