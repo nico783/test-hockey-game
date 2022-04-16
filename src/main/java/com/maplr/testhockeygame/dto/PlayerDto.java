@@ -1,6 +1,14 @@
 package com.maplr.testhockeygame.dto;
 
-public class PlayerDto {
+import java.io.Serializable;
+
+/**
+ * Representation of a {@link Player} to the user.
+ * In contrast to the object model, the notion of captain is included in this representation of the player.
+ *
+ * @author Nicolas Benizri
+ */
+public class PlayerDto implements Serializable {
     private long number;
     private String name;
     private String lastName;

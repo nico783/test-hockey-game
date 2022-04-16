@@ -1,8 +1,14 @@
 package com.maplr.testhockeygame.dto;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class TeamDto {
+/**
+ * Representation of a {@link Team} to the user.
+ *
+ * @author Nicolas Benizri
+ */
+public class TeamDto implements Serializable {
     private long id;
     private String coach;
     private long year;
