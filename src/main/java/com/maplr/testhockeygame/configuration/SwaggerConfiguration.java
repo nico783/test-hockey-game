@@ -19,9 +19,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfiguration {
-    public static final String APP_NAME = "Test Hockey Game";
-    public static final String AUTHOR = "Nicolas Benizri";
-    public static final String AUTHOR_MAIL = "nico783@hotmail.com";
+    private static final String APP_NAME = "Test Hockey Game";
+    private static final String AUTHOR = "Nicolas Benizri";
+    private static final String AUTHOR_MAIL = "nico783@hotmail.com";
 
     @Bean
     public Docket api() {
